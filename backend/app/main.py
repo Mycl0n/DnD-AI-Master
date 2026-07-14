@@ -1,9 +1,8 @@
-from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.schemas import ChatRequest, ChatResponse
-from app.prompts.system_prompt import SYSTEM_PROMPT
-from app.openrouter_client import call_openrouter
+from .schemas import ChatRequest, ChatResponse
+from .prompts.system_prompt import SYSTEM_PROMPT
+from .openrouter_client import call_openrouter
 
 app = FastAPI(title="DND AI DM Backend")
 
